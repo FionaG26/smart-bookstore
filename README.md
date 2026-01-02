@@ -1,6 +1,4 @@
-Absolutely! Here’s a polished **`README.md`** for your **Smart Bookstore project** — ready to paste directly into your GitHub repo. It includes project overview, instructions, table formatting, and placeholders for architecture diagrams.
 
-```markdown
 # Smart Bookstore
 
 ![Smart Bookstore Architecture](docs/architecture.png)  
