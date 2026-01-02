@@ -1,8 +1,26 @@
 
 # Smart Bookstore
 
-![Smart Bookstore Architecture](docs/architecture.png)  
-*Architecture diagram placeholder — add your PNG in `docs/` folder*
+      +---------------------+
+      |  bookstore-admin     |
+      |  (Vaadin UI)        |
+      +----------+----------+
+                 |
+                 v
+      +---------------------+
+      |  bookstore-backend   |
+      |  (Spring Boot REST)  |
+      +----------+----------+
+                 |
+                 v
+      +---------------------+
+      |   H2 In-Memory DB   |
+      +---------------------+
+      +---------------------+
+      | bookstore-microservice |
+      |  (Independent REST)   |
+      +---------------------+
+
 
 ## Project Overview
 
