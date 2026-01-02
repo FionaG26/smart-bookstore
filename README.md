@@ -175,7 +175,3 @@ The Smart Bookstore project is a fully functional Java 11 compatible application
 * Preloaded sample data
 * Admin UI with Vaadin
 * Modular project structure
-
-This project provides a strong foundation for learning modern Java backend development and building full-stack applications.
-
-````
