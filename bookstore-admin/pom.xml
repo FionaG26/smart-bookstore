@@ -22,12 +22,20 @@
         <vaadin.version>14.10.5</vaadin.version>
     </properties>
 
+    
     <dependencies>
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-spring-boot-starter</artifactId>
             <version>${vaadin.version}</version>
         </dependency>
+	
+	<dependency>
+            <groupId>com.bookstore</groupId>
+	    <artifactId>bookstore-backend</artifactId>
+	    <version>1.0.0</version>
+        </dependency>
+     
     </dependencies>
 
     <build>

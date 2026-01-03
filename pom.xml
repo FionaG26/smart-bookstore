@@ -6,6 +6,7 @@
     <groupId>com.bookstore</groupId>
     <artifactId>smart-bookstore</artifactId>
     <version>1.0.0</version>
+    <packaging>pom</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -37,7 +38,7 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
-        </dependency>
+       </dependency>
 
         <!-- Vaadin -->
         <dependency>
@@ -46,6 +47,12 @@
             <version>${vaadin.version}</version>
         </dependency>
     </dependencies>
+    
+     <modules>
+	  <module>bookstore-backend</module>
+	  <module>bookstore-admin</module>
+	  <module>bookstore-microservice</module>
+      </modules>
 
     <build>
         <plugins>
