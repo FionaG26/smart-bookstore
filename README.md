@@ -1,25 +1,8 @@
-
 # Smart Bookstore
-
-      +---------------------+
-      |  bookstore-admin     |
-      |  (Vaadin UI)        |
-      +----------+----------+
-                 |
-                 v
-      +---------------------+
-      |  bookstore-backend   |
-      |  (Spring Boot REST)  |
-      +----------+----------+
-                 |
-                 v
-      +---------------------+
-      |   H2 In-Memory DB   |
-      +---------------------+
-      +---------------------+
-      | bookstore-microservice |
-      |  (Independent REST)   |
-      +---------------------+
+[![Java Version](https://img.shields.io/badge/Java-11-blue)](https://www.java.com/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7.18-brightgreen)](https://spring.io/projects/spring-boot)
+[![Vaadin](https://img.shields.io/badge/Vaadin-14.x-purple)](https://vaadin.com/)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 
 ## Project Overview
