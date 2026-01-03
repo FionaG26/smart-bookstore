@@ -1,4 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="
            http://maven.apache.org/POM/4.0.0
@@ -16,30 +16,37 @@
     <groupId>com.admin</groupId>
     <artifactId>bookstore-admin</artifactId>
     <version>1.0.0</version>
+    <packaging>jar</packaging>
 
     <properties>
         <java.version>11</java.version>
         <vaadin.version>14.10.5</vaadin.version>
     </properties>
 
-    
     <dependencies>
+        <!-- Vaadin 14 -->
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-spring-boot-starter</artifactId>
             <version>${vaadin.version}</version>
         </dependency>
-	
-	<dependency>
-            <groupId>com.bookstore</groupId>
-	    <artifactId>bookstore-backend</artifactId>
-	    <version>1.0.0</version>
+
+        <!-- Spring Boot Web for REST calls -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-     
+
+        <!-- JSON parsing -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
+            <!-- Spring Boot Maven plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

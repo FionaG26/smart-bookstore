@@ -1,35 +1,32 @@
 package com.ms;
 
-import jakarta.ws.rs.*;
-import jakarta.ws.rs.core.MediaType;
+import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
-@Path("/ms/books")
-@Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+@RestController
+@RequestMapping("/ms/books")
 public class BookResource {
 
-    private static final List<Book> books = new ArrayList<>();
-    private static final AtomicLong counter = new AtomicLong();
+    private final List<Book> books = new ArrayList<>();
+    private final AtomicLong idCounter = new AtomicLong();
 
-    @GET
-    public List<Book> getAll() {
+    @GetMapping
+    public List<Book> getAllBooks() {
         return books;
     }
 
-    @POST
-    public Book addBook(Book book){
-        book.setId(counter.incrementAndGet());
+    @PostMapping
+    public Book addBook(@RequestBody Book book) {
+        book.setId(idCounter.incrementAndGet());
         books.add(book);
         return book;
     }
 
-    @DELETE
-    @Path("/{id}")
-    public void deleteBook(@PathParam("id") Long id){
-        books.removeIf(book -> book.getId().equals(id));
+    @DeleteMapping("/{id}")
+    public void deleteBook(@PathVariable Long id) {
+        books.removeIf(b -> b.getId().equals(id));
     }
 }
 
